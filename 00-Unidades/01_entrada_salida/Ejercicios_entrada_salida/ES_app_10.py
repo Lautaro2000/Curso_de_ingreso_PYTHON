@@ -36,9 +36,9 @@ class App(customtkinter.CTk):
     def btn_mostrar_on_click(self):
         Importe = float(self.txt_importe.get())
         Importe_descuento = (20 / 100 ) * Importe
-        Importe - Importe_descuento 
+        Importe = Importe - Importe_descuento
         mensaje = "El importe final queda en".format(Importe_descuento)
-        alert("Mensaje", mensaje)
+        alert("Descuento", "El precio final con el descuento {}% es de {}% ".format(Importe_descuento, Importe))
         
 
 
