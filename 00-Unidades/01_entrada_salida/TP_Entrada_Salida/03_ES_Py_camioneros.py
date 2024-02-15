@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Lautaro
+apellido: Melana
 ---
 TP: ES_Camioneros
 ---
@@ -46,10 +46,17 @@ class App(customtkinter.CTk):
         self.btn_tiempo_llegada.grid(row=4, pady=10, padx=30, columnspan=2, sticky="nsew")
     
     def btn_cantidad_camiones_on_click(self):
-        pass
+        toneladas = float(self.txt_toneladas.get())
+        cantidad_de_camiones = toneladas /3.5
+        importante = round(cantidad_de_camiones, 2)
+        
+        alert("Cantidad de camiones", "Puede transportar {}kg por vehiculo".format(importante))
+        
 
     def btn_tiempo_llegada_on_click(self):
-        pass
+        kilometros = float(self.txt_kilometros.get())
+        tiempo_recorrido = kilometros/90
+        alert("Mensaje", "Lo que tarda el camion es {}km/h".format(tiempo_recorrido))
     
     
 if __name__ == "__main__":

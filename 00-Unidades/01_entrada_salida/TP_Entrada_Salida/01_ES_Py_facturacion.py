@@ -63,17 +63,17 @@ class App(customtkinter.CTk):
         total_2 = float(self.txt_importe_2.get())
         total_3 = float(self.txt_importe_3.get())
         suma_de_totales = (total_1 + total_2 + total_3)/3
-        porcentaje = suma_de_totales * suma_de_totales /100
-        porcentaje_total = suma_de_totales + porcentaje
+        porcentaje_total = suma_de_totales 
         alert ("Total", porcentaje_total)
 
     def btn_total_iva_on_click(self):
         total_1 = float(self.txt_importe_1.get())
         total_2 = float(self.txt_importe_2.get())
         total_3 = float(self.txt_importe_3.get()) 
-        porcentaje_iva = (total_1 + total_2 + total_3)
-        porcentaje_con_iva = (total_1 + total_2 + total_3)%21
-        alert ("Total", porcentaje_con_iva)
+        suma_producto = total_1 + total_2 + total_3
+        incremento = suma_producto * 0.21 
+        resultado = suma_producto + incremento
+        alert ("Suma y aumento IVA", resultado)
     
 if __name__ == "__main__":
     app = App()
